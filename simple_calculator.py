@@ -12,9 +12,9 @@ def subtract(number_c,number_d):
     subtract_sum=int(number_c)-int(number_d)
     return subtract_sum
 
-mul = lambda x,y:x*y
-div = lambda x,y:x/y
-mod = lambda x,y:x%y
+ #mul = lambda x,y:x*y
+ #div = lambda x,y:x/y
+ #mod = lambda x,y:x%y
 
 while True:
     op = input("input operation:")
@@ -23,13 +23,16 @@ while True:
     elif op == "+":
         num1,num2,ret = arithmetic_ops(plus) 
     elif op == "*":
-        num1,num2,ret= arithmetic_ops(mul) 
+        #num1,num2,ret= arithmetic_ops(mul) 
+        num1,num2,ret= arithmetic_ops(lambda x,y:x*y) 
     elif op == "-":
         num1,num2,ret = arithmetic_ops(subtract)
     elif op == "/":
-        num1,num2,ret= arithmetic_ops(div)
+        #num1,num2,ret= arithmetic_ops(div)
+        num1,num2,ret= arithmetic_ops(lambda x,y:x/y) 
     elif op == "%":
-        num1,num2,ret= arithmetic_ops(mod)
+        #num1,num2,ret= arithmetic_ops(mod)
+        num1,num2,ret= arithmetic_ops(lambda x,y:x%y) 
     else:
         print("Invalid operation")
         continue
