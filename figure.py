@@ -1,7 +1,8 @@
 import math
 class line:
-    def __init__(self, __length=0):
-        self.__length = __length
+    __length=0
+    def __init__(self, length):
+        self.__length = length
 
     def set_length(self, length):
         self.__length = length
